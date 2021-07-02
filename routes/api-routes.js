@@ -6,14 +6,12 @@ router.get('/', function (req, res) {
     });
 });
 
-const allAccounts = require('../user/account/allAccounts');
 const login = require('../user/account/login');
 const newAccount = require('../user/account/newAccount');
 const update = require('../user/account/update');
 const deleteAccount = require('../user/account/delete');
 
 router.route('/users')
-    .get(allAccounts.index)
     .post(newAccount.new)
     .put(update.update)
     .patch(update.update)
